@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h1>Dashboard</h1>
+		<div class="row">
+			<p>Votre adresse email :
+				{{ app.user.email }}</p>
+				<p>
+					<a href="{{ path("app_home") }}">retour à l'accueil</a>
+				</p>
+		</div>
+	</div>
+{% endblock %}

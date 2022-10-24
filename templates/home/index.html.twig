@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h1>Accueil</h1>
+
+		<div class="row">
+			{% if not app.user %}
+				<p>
+					<a href="{{ path("connect_google") }}">Se connecter avec Google ! :)</a>
+				</p>
+			{% endif %}
+
+			{% if app.user %}
+				<p>
+					<a href="{{ path("logout") }}">Se déconnecter :(</a>
+				</p>
+			{% endif %}
+		</div>
+
+		<div class="row">
+			
+            
+		</div>
+
+	</div>
+{% endblock %}
